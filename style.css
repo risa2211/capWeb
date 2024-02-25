@@ -1,0 +1,151 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(ellipse at bottom, #013155 0%, #01162e 100%);
+    overflow: hidden;
+}
+
+#stars-group1 {
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    animation: starsAnimation 190s linear infinite;
+}
+
+#stars-group2 {
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    animation: starsAnimation 100s linear infinite;
+}
+
+#stars-group3 {
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    animation: starsAnimation 80s linear infinite;
+}
+
+@-webkit-keyframes starsAnimation {
+    from {
+        -webkit-transform: translateY(0px);
+    }
+
+    to {
+        -webkit-transform: translateY(-2000px);
+    }
+}
+
+@keyframes starsAnimation {
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(-2000px);
+    }
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    padding: 0px 20px; /* Adjust as needed */
+    margin-top: 0px;
+}
+
+.logo-container {
+    margin-right: 5px; /* Adjust margin as needed */
+}
+
+.logo {
+    width: 80px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.text-container {
+    margin-right: 20px; /* Adjust margin as needed */
+}
+
+.text {
+    color: white; /* Adjust color as needed */
+    font-size: 30px;
+}
+
+.line {
+    border: none;
+    height: 1px;
+    background-color: white; /* Adjust color as needed */
+    margin: 0;
+    margin-left: 20px; /* Adjust the left margin to create space */
+    margin-right: 20px;
+}
+
+.hero-section {
+    position: relative;
+    height: 300px; /* Adjust height of hero section */
+    color: #fff; /* Adjust text color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.hero-text h1 {
+    margin: 0;
+    opacity: 0;
+    font-size: 60px; /* Initially hide text */
+    margin-top: 150px;;
+}
+.hero-text h2 {
+    margin: 0;
+    opacity: 0;
+    font-size: 30px; /* Initially hide text */
+}
+
+.hero-text h2 .highlight {
+    color: #ff9900; /* Adjust highlight color */
+}
+.additional-text {
+    margin: 0;
+    font-weight: lighter;
+    color:#bebeb8;
+    font-style: italic;
+    font-size: 18px; /* Adjust font size as needed */
+    margin-top: 40px; /* Adjust margin as needed */
+    opacity: 0; /* Initially hide text */
+}
+.btn-glow {
+    margin-top: 100px;;
+    color: #fff !important;
+    display: inline-block;
+    background: #01162e;
+    background: linear-gradient(rgb(92, 77, 122) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8a61f8', endColorstr='#ec5fe7',GradientType=1 );
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 56px;
+    letter-spacing: 0.07em;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    padding: 0 30px;
+    transition: 0.3s;
+    box-shadow: none;
+    animation: glow 3s infinite;
+    animation-timing-function: ease-out;
+    position: relative;
+    border-radius: 28px;
+ }
+ .btn-glow:hover {
+    box-shadow: 0 0 0 10px #3daaa200;
+    transition: .8s;
+ }
+ @keyframes glow{
+    0% { box-shadow: 0 0 20px #8b61f844; text-shadow:  0 0 0px #fff; }
+    40% { box-shadow: 0 0 20px #8b61f844; text-shadow:  0 0 3px #fff;}
+    100% { box-shadow: 0 0 20px #8b61f844; text-shadow:  0 0 1px #fff; }
+ }
