@@ -1,4 +1,4 @@
-function randomStars(n) {
+  function randomStars(n) {
     let value = `${Math.floor(Math.random() * 2000 + 2)}px ${Math.floor(
         Math.random() * 2000 + 2
     )}px #FFF`;
@@ -10,7 +10,6 @@ function randomStars(n) {
     return value;
 }
 
-// Function to fade in hero section text
 function fadeInText() {
     const heroText = document.getElementById('heroText');
     const textElements = heroText.querySelectorAll('h1, h2, h3, p');
@@ -29,10 +28,24 @@ function fadeInText() {
 
         if (index >= textElements.length) {
             clearInterval(intervalId);
+            createUploadButton();
         }
     }, 10); // Adjust the interval speed as needed
 }
 
+function createUploadButton() {
+    // Select the parent element where the button will be inserted
+    const heroText = document.getElementById('heroText');
+
+    // Create the button element
+    const uploadButton = document.createElement('a');
+    uploadButton.href = '#';
+    uploadButton.textContent = 'Upload Image';
+    uploadButton.classList.add('btn-glow', 'btn-hover-shine');
+
+    // Insert the button into the hero section
+    heroText.appendChild(uploadButton);
+}
 document.addEventListener("DOMContentLoaded", function() {
     fadeInText(); // Fade in hero section text on page load
     
@@ -44,9 +57,4 @@ document.addEventListener("DOMContentLoaded", function() {
     stars2.style["boxShadow"] = randomStars(300);
     stars3.style["boxShadow"] = randomStars(200);
 });
-
-
-
-
-  
   
